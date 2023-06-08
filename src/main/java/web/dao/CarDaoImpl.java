@@ -10,19 +10,19 @@ import java.util.stream.Collectors;
 @Repository
 public class CarDaoImpl implements CarDao {
 
-    private static int ID;
+    private static int model;
+    private List<Car> list;
+    {
+        list = new ArrayList<>();
+        list.add(new Car(++model, "series1", 1));
+        list.add(new Car(++model, "series2", 2));
+        list.add(new Car(++model, "series3", 3));
+        list.add(new Car(++model, "series4", 4));
+        list.add(new Car(++model, "series5", 5));
+    }
 
     @Override
     public List<Car> getCars(int count) {
-        List<Car> list;
-        {
-            list = new ArrayList<>();
-            list.add(new Car(++ID, "series1", 1));
-            list.add(new Car(++ID, "series2", 2));
-            list.add(new Car(++ID, "series3", 3));
-            list.add(new Car(++ID, "series4", 4));
-            list.add(new Car(++ID, "series5", 5));
-        }
         if (count == 0) {
             return list;
         }

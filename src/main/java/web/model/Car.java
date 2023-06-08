@@ -1,8 +1,5 @@
 package web.model;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class Car {
 
     private int model;
@@ -22,7 +19,7 @@ public class Car {
         return model;
     }
 
-    public void setModel(String name) {
+    public void setModel(int model) {
         this.model = model;
     }
 
@@ -30,7 +27,7 @@ public class Car {
         return series;
     }
 
-    public void setSeries(int count) {
+    public void setSeries(String series) {
         this.series = series;
     }
 

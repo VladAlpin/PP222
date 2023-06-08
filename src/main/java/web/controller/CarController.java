@@ -11,15 +11,14 @@ import java.util.Optional;
 @Controller
 public class CarController {
 
-    final
-    CarService carService;
+    private final CarService carService;
 
     public CarController(CarService carService) {
         this.carService = carService;
     }
 
     @GetMapping("/cars")
-    public String showCars(@RequestParam(value = "count") Optional<Integer> count, Model model) {
+    public String showCars(@RequestParam("count") Optional<Integer> count, Model model) {
         model.addAttribute("cars", carService.getCars(count.orElse(0)));
         return "cars";
     }
