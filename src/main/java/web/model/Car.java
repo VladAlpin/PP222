@@ -6,8 +6,7 @@ public class Car {
     private String series;
     private int age;
 
-    public Car() {
-    }
+    public Car() {}
 
     public Car(int model, String series, int age) {
         this.model = model;

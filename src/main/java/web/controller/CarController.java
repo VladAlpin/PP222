@@ -4,13 +4,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import web.services.CarService;
+import web.service.CarService;
 
 import java.util.Optional;
 
 @Controller
 public class CarController {
-
     private final CarService carService;
 
     public CarController(CarService carService) {
